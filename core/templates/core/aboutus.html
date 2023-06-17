@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% load static %}
+
+{% block content %}
+        
+    <div class="flex items-center justify-center p-12">
+        <div class="mx-auto w-full max-w-[550px] px-6 py-12 bg-amber-100 rounded-xl">
+            <div>
+                <h1 class="mb-12 text-2xl text-center">ABOUT THE VENTURE</h1>
+            </div>
+
+            <div class="mb-5">
+                <img class="rounded-xl" src="{% static 'img/itsme.jpeg' %}">
+                <br>
+                <h1 class="font-extrabold text-center lg:text-5xl">John McDove</h1><br>
+
+                <p>This is a portfolio project of the ALX Software Engineer Cohort 7 Backend Specialization.</p><br>
+
+                <p>The concept, design, coding, database, functionalities and paraphernalia is solely the efforts of this full-stack develop.</p><br>
+
+                <p>This web application aims to demonstrate the power and ease of django and tailwind css in the development of the backend structure of a website that is responsive, secure and efficient</p><br>
+
+                <p>This was to have been a teamwork portfolio, but the developer chose to go solo to demonstrate his abilities as a potential full-stack developer.</p><br>
+                Email: john_illusies@yahoo.com<br>
+                Github: illusies@github.com
+            </div>
+        
+        </div>
+    </div>
+{% endblock %}

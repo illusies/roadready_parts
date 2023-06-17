@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <div class="mx-auto container mt-6 px-6 py-12 bg-amber-100 rounded-xl">
+        <h2 class="mb-12 text-2xl text-center">Shopping Cart</h2>
+
+        <div class="grid grid-cols-4 gap-3">
+            <div class="p-6 bg-white rounded-b-xl col-span-2">
+                <h2 class="mb-12 text-2xl text-center">Your Order</h2>
+                <div><img ></div>                
+                <div>
+                    <ul>
+                        <li>Product Name:</li>
+                        <li>Quantity:</li>
+                        <li>Description:</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="p-6 bg-white rounded-b-xl col-span-2">
+                <h2 class="mb-12 text-2xl text-center">Summary</h2>
+                <img>
+                <div>
+                    <ul>
+                        <li>Items in the cart:</li>
+                        <li>Savings Applied:</li>
+                        <li>Total:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <br><button class="px-8 py-4 text-lg bg-sky-900 text-white rounded-xl hover:bg-yellow-300 hover:text-black">Submit</button>
+        </div>
+    </div>
+{% endblock %}

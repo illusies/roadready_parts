@@ -1,0 +1,98 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <div class="mx-auto container grid grid-cols-2 gap-3">
+        <div>
+            <h1 class="font-extrabold lg:text-6xl leading-tight xl:leading-snug text-right">Rev up your ride with</h1>
+            <h1 class="font-extrabold lg:text-8xl leading-tight xl:leading-snug text-right">RoadReady</h1>
+            <h1 class="font-extrabold lg:text-8xl leading-tight xl:leading-snug text-right">Parts!</h1>
+            <a href="{% url 'core:login' %}" class="px-6 py-3 text-lg font-semibold bg-sky-900 text-white rounded-xl hover:bg-yellow-300 hover:text-black">Login</a>
+            <a href="{% url 'core:tellus' %}" class="px-6 py-3 text-lg font-semibold bg-sky-900 text-white rounded-xl hover:bg-yellow-300 hover:text-black">Tell Us</a>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <img src="{% static 'img/car-parts-pieces.jpg' %}" alt="Seasonal Auto Parts">
+        </div>
+    </div>
+
+    <!-- Frequently Searched Section -->
+    <div class="mx-auto container grid grid-cols-4 gap-3 mt-6 px-6 py-12 bg-amber-100 rounded-xl">
+        <div class="p-6 bg-white rounded-b-xl">
+            
+            <h2 class="mb-12 text-2xl text-center">New <br> Products</h2>
+            <img class="w-full" src="{% static 'img/car-alarm-system.jpg' %}" alt="New Products">
+        </div>
+        <div class="p-6 bg-white rounded-b-xl">
+            <h2 class="mb-12 text-2xl text-center">Seasonal <br> items</h2>
+            <img class="w-full" src="{% static 'img/seasonal_autoparts.jpg' %}" alt="Seasonal Auto Parts">
+        </div>
+        <div class="p-6 bg-white rounded-b-xl">
+            <h2 class="mb-12 text-2xl text-center">Best <br> Brands</h2>
+            <img class="w-full" src="{% static 'img/car-logos.jpg' %}" alt="Car logos">
+        </div>
+        <div class="p-6 bg-white rounded-b-xl">
+            <h2 class="mb-12 text-2xl text-center">Categories</h2>
+            <img class="w-full" src="{% static 'img/car-trio.jpg' %}" alt="Three Cars">
+        </div>
+    </div>
+    
+    <!-- Frequently Searched Section -->
+    <div class="mx-auto container mt-6 px-6 py-12 bg-amber-100 rounded-xl">
+        <h2 class="mb-12 text-2xl text-center">Frequently Searched</h2>
+
+        <div class="grid grid-cols-3 gap-3">
+            <div class="p-6 bg-white rounded-b-xl">
+                <img class="w-full" src="{% static 'img/booster-cables.jpg' %}" alt="Three Cars">
+                <h2 class="mb-12 text-2xl text-center">Booster Cables</h2>
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <img class="w-full" src="{% static 'img/toyota-corolla-2023-headlight.jpg' %}" alt="Three Cars">
+                <h2 class="mb-12 text-2xl text-center">Headlight</h2>
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <img class="w-full" src="{% static 'img/car-inverter.webp' %}" alt="Three Cars">
+                <h2 class="mb-12 text-2xl text-center">Inverter</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Highlights Section -->
+    <div class="mx-auto container mt-6 px-6 py-12 bg-amber-100 rounded-xl">
+        <h2 class="mb-12 text-2xl text-center">Category Highlights</h2>
+
+        <div class="grid grid-cols-6 gap-3">
+          
+           
+            <div class="p-6 bg-white rounded-b-xl">
+                <h2 class="mb-12 text-2xl text-center">Auto<br>Accessories</h2>
+                <img class="w-full" src="{% static 'img/ABS sensor.webp' %}" alt="Car logos">
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <h2 class="mb-12 text-2xl text-center">Auto<br>Parts</h2>
+                <img class="w-full" src="{% static 'img/automotive-4pin-relay.jpg' %}" alt="Car logos">
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <h2 class="mb-12 text-2xl text-center">Auto Repair<br>and Decoration</h2>
+                <img class="w-full" src="{% static 'img/car-mat.jpg' %}" alt="Car logos">
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <h2 class="mb-12 text-2xl text-center">Auto<br>Safety</h2>
+                <img class="w-full" src="{% static 'img/car-reverse-camera.jpg' %}" alt="Car logos">
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <h2 class="mb-12 text-2xl text-center">Motorcycle<br>and Bicycle</h2>
+                <img class="w-full" src="{% static 'img/helmet.webp' %}" alt="Car logos">
+            </div>
+            <div class="p-6 bg-white rounded-b-xl">
+                <h2 class="mb-12 text-2xl text-center">Related<br>Products</h2>
+                <img class="w-full" src="{% static 'img/car-air-purifier.jpg' %}" alt="Car logos">
+            </div>
+           
+
+        </div>
+    </div>
+{% endblock %}

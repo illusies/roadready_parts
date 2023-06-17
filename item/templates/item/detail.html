@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block content %}
+    <div class="grid grid-cols-5 gap-6 w-1/2 my-6 mx-auto p-6 bg-amber-100 rounded-xl">
+        <div class="col-span-3">
+            <img src="{{ item.image.url }}" class="rounded-xl">
+        </div>
+
+        <div class="col-span-2 p-6 rounded-xl">
+            <h1 class="mb-6 text-3xl">{{ item.name }}</h1>
+            <p><strong>Price: </strong>{{ item.price }}</p>
+            <p><strong>Seller: </strong>{{ item.created_by }}</p>
+            
+            {% if item.description %}
+                <p><strong>Description: </strong>{{ item.description }}</p>
+            {% endif %}
+
+            {% if request.user == item.created_by %}
+                <div>
+                    <a href="{% url 'item:edit' item.id %}"
+                        class="inline-block mt-6 px-6 py-3 text-lg bg-sky-900 text-white rounded-xl hover:bg-yellow-300 hover:text-black">Edit</a>
+                    <a href="{% url 'item:delete' item.id %}" class="inline-block mt-6 px-6 py-3 text-lg bg-sky-900 text-white rounded-xl hover:bg-yellow-300 hover:text-black">Delete</a>
+                </div>
+            {% else %}  
+                <a href="{% url 'core:contact' %}" class="inline-block mt-6 px-6 py-3 text-lg bg-sky-900 text-white rounded-xl hover:bg-yellow-300 hover:text-black">Contact seller</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
